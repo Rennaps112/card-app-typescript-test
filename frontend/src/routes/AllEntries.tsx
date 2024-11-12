@@ -55,7 +55,7 @@ export default function AllEntries({ isDarkMode }: SettingsProperties) {
                   🖊
                 </button>
               </div>
-               <div className="text-right text-sm md:text-lg">
+              <div className="text-right text-sm md:text-lg">
                 <time className="block">
                   <span className="font-semibold">Created At:</span>{" "}
                   {new Date(entry.created_at.toString()).toLocaleDateString()}

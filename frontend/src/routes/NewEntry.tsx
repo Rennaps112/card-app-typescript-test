@@ -7,7 +7,12 @@ interface SettingsProperties {
 }
 
 export default function NewEntry({ isDarkMode }: SettingsProperties) {
-  const emptyEntry: Entry = { title: "", description: "", created_at: new Date().toISOString().split("T")[0], deadline: new Date(),};
+  const emptyEntry: Entry = {
+    title: "",
+    description: "",
+    created_at: new Date().toISOString().split("T")[0],
+    deadline: new Date(),
+  };
   const { saveEntry } = useContext(EntryContext) as EntryContextType;
   const [newEntry, setNewEntry] = useState<Entry>(emptyEntry);
   const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

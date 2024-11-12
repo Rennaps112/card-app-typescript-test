@@ -9,7 +9,7 @@ interface SettingsProperties {
 
 export default function EditEntry({ isDarkMode }: SettingsProperties) {
   const { id } = useParams();
-  const emptyEntry: Entry = { title: "", description: "", created_at: new Date(),  deadline: new Date(),};
+  const emptyEntry: Entry = { title: "", description: "", created_at: new Date(), deadline: new Date() };
 
   const { updateEntry, entries } = useContext(EntryContext) as EntryContextType;
   const [newEntry, setNewEntry] = useState<Entry>(emptyEntry);
